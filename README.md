@@ -1,6 +1,7 @@
 ## My Web Application (Title)
 
 * [General info](#general-info)
+## Theresa
 * [Technologies](#technologies)
 * [Contents](#content)
 
@@ -21,6 +22,7 @@ Content of the project folder:
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
+├── profile.html             # Profile/settings page
 └── README.md
 
 It has the following subfolders and files:
