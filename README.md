@@ -7,7 +7,7 @@ index.html
 * [Technologies](#technologies)
 * [Contents](#content)
 
-* Kevin Baumann index.html
+* Kevin Baumann index.html 
 
 ## General Info
 This browser based web application to ...
