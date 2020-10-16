@@ -26,7 +26,7 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── index.html               # landing HTML file, this is what users see when you come to editing forpractice.
 ├── profile.html             # Profile/settings page
 └── README.md
 
