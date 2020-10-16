@@ -8,7 +8,7 @@ index.html
 * [Technologies](#technologies)
 * [Contents](#content)
 
-* Kevin Baumann index.html 
+## Kevin Baumann index.html 
 
 ## General Info
 This browser based web application to ...
@@ -26,7 +26,7 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to editing forpractice.
+├── index.html               # landing HTML file, this is what users see when you come to editing for practice.
 ├── profile.html             # Profile/settings page
 └── README.md
 
