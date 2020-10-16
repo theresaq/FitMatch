@@ -4,7 +4,7 @@ index.html
 ## My Web Application (Title)
 
 * [General info](#general-info)
-## Theresa
+## Theresa profile.html
 * [Technologies](#technologies)
 * [Contents](#content)
 
