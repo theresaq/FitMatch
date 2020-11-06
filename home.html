@@ -17,20 +17,24 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="">User</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="profile.html">Profile</a>
+        
+        <!--Dropdown button-->
+    <div class = "dropdown">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
+            <div class = "dropdown-content">
+                <a href = "matches.html">Matches</a>
+                <a href = "messages.html">Messages</a>
+            </div>
         </button>
+    </div>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Our Group data</a>
+                    <a class="nav-link" href="matches.html">Matches</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="profile.html">my user profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login / Sign Up</a>
+                    <a class="nav-link" href="messages.html">Messages</a>
                 </li>
             </ul>
         </div>
@@ -40,7 +44,7 @@
         <div class="grid-container">User Photo</div>
         <div class="grid-container2">
             <div>Name</br>Age</br>Location # kilometers away</div>
-            
+
         </div>
 
         <!--<div class="card border-success mb-3" style="max-width: fit-content;">
@@ -53,7 +57,7 @@
         <!-- Footer -->
         <footer class="page-footer fixed-bottom">
             <div style="background-color: lightgray;">
-                <div id = "footerID">
+                <div id="footerID">
                     <a href="home.html">Home</a>
                     <a href="search.html">Search</a>
                     <a href="home.html">Notifications</a>
