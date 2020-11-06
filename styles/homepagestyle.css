@@ -1,0 +1,49 @@
+
+
+div{
+    color: black;
+}
+
+
+/*White grid background*/
+.grid-background {
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: 20pt;
+    display: flexbox;
+  }
+  
+  .grid-container {
+    background-color: grey;
+    font-size: 20pt;
+    margin: 15px;
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px;
+    grid-gap: 1px;
+  
+  }
+
+  .grid-container2 {
+    background-color: grey;
+    font-size: 20pt;
+    margin: 15px;
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 160px;
+  }
+
+    .footerID{
+      font-size: 10pt;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    
+    }
+  
