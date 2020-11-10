@@ -9,6 +9,7 @@
 
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- Copied from firebase documentation -->
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
@@ -24,104 +25,47 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
-    <script>
-        //Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyAckox_zIqhEH-bpkKPAXbo1W7Xfc8cKOo",
-            authDomain: "fitmatch-50907.firebaseapp.com",
-            databaseURL: "https://fitmatch-50907.firebaseio.com",
-            projectId: "fitmatch-50907",
-            storageBucket: "fitmatch-50907.appspot.com",
-            messagingSenderId: "964225984537",
-            appId: "1:964225984537:web:638cbde4774c79e8682288"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
-        type='text/css'>
-    <link rel="stylesheet" href="~/lib/Font-Awesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="~/lib/Font-Awesome/css/regular.min.css">
-    <link rel="stylesheet" href="~/lib/Font-Awesome/css/solid.min.css">
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-      #icon {
-        width: 100px;
-        height: 100px;
-      }
+        #icon {
+            width: 100px;
+            height: 100px;
+        }
 
-      span {
-        font-size: 30pt;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-      }
+        span {
+            font-size: 30pt;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+        }
 
-      img {
-        vertical-align: middle;
-      }
+        img {
+            vertical-align: middle;
+        }
 
-      #app-name {
-        text-align: center;
-        padding: 25px;
-      }
+        #app-name {
+            text-align: center;
+            padding: 25px;
+        }
 
-      #instruc {
-        text-align: left;
-        padding-top: 10px;
-        padding-bottom: 50px;
-        margin: auto;
-        width: 400px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 14pt;
-      }
+        #instruc {
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 50px;
+            margin: auto;
+            width: 400px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14pt;
+        }
     </style>
 </head>
 
 <body>
     <p id="app-name"><img src="images/droplet-icon.png" alt="icon" id=icon> <span>FitMatch</span></p>
-    <p id="instruc">If you are new to our app, please enter your email below and you will be prompted to create an account.</p>
+    <p id="instruc">If you are new to our app, please enter your email below and you will be prompted to create an
+        account.</p>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
-
-    <script>
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        var uiConfig = {
-            callbacks: {
-                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-                    // User successfully signed in.
-                    // Return type determines whether we continue the redirect automatically
-                    // or whether we leave that to developer to handle.
-                    return true;
-                },
-                uiShown: function () {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
-                }
-            },
-            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-            signInFlow: 'popup',
-            signInSuccessUrl: 'main.html',
-            signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-                //firebase.auth.GithubAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                //firebase.auth.PhoneAuthProvider.PROVIDER_ID
-            ],
-            // Terms of service url.
-            tosUrl: '<your-tos-url>',
-            // Privacy policy url.
-            privacyPolicyUrl: '<your-privacy-policy-url>'
-        };
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -133,13 +77,15 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
+    <!-- Firebase libraries from CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+    <!-- Your own Firebase API key information -->
+    <script src="scripts/firebase_api_fitmatch.js"> </script>
+    <script src="scripts/login.js"></script>
+
 </body>
-
- <!-- Firebase libraries from CDN -->
- <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
- <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
- <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-
- <!-- Your own Firebase API key information -->
- <script src="scripts/firebase_api_fitmatch.js"> </script>
+</html>
