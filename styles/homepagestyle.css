@@ -5,9 +5,18 @@ div{
     font-family: 'Roboto', sans-serif;
 }
 
-/*White grid background*/
+.back{
+  background-color: #D52941;
+  height: fit-content;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;  
+}
+
+/*Color pallette grid background*/
 .grid-background {
-    background-color: white;
+    background-color: #D52941;
     width: fit-content;
     height: fit-content;
     font-size: 20pt;
