@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>FitMatch</title>
-    </head>
-    
-    <body>
-        <h1>Profile</h1>
-          <h2>Personal Information</h2>
-            <p>Name</p>
-            <p>Gender</p>
-            <p>Birth Date</p>
-            <p>Interests</p>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>User Profile</title>
+
+  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles/profile.css">
+
+  <!-- Copied from firebase documentation -->
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="profile.html"><img src="./images/usericon.png" alt="icon" id=icon></a>
+
+    <!--Dropdown button center to change to groups-->
+    <div class="navbar-brand">
+      <div><span id="UserName">Profile</span></div>
+    </div>
+
+    <!--Dropdown button Top Right-->
+    <div class="dropdown">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"><span
+          class="navbar-toggler-icon"></span>
+        <div class="dropdown-content">
+          <a href="matches.html">Matches</a>
+          <a href="messages.html">Messages</a>
+        </div>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="matches.html">Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="messages.html">Messages</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <img src='https://dummyimage.com/800x800/000/ffffff&text=Profile+Picture' alt='profile picture' id='circle'>
+  <a class="btn btn-secondary" href=# role="button">Change Profile Picture</a>
+
+  <form>
+    <h1>Personal Information</h1>
+    <label for="Gender">Gender</label><br>
+    <select id="Gender" name="Gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    <br>
+    <label for="Birth date">Birth Date</label><br>
+    <input type="date" id="birthday" name="birthday"><br>
+    <label for="Location">Location</label><br>
+    <input type="text" id="City" name="City" placeholder="City"><br>
+    <input type="text" id="Province" name="Province" placeholder="Province"><br>
+
+    <h1>Fitness Interests</h1>
+    <p>Activites you’re interested in will be added as tags to your profile.</p>
+
+    <input type="text" id="Activity-1" name="Activity-1" placeholder="#Activity 1"><br>
+    <select id="SkillLevel-1" name="SkillLevel-1">
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Expert">Expert</option>
+    </select><br>
+    <input type="submit" value="Save">
+  </form>
+  <h1></h1>
+
+  <script src="./scripts/firebase_api_fitmatch.js"> </script>
+  <script src="./scripts/readUserName.js"> </script>
+</body>
