@@ -114,7 +114,10 @@ div{
     .dropdown-individual{
       position: relative;
       text-align: center;
-      
+    }
+
+    #footerID {
+      display: none;
     }
   }
 
