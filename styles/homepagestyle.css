@@ -17,35 +17,47 @@ div{
 /*Color pallette grid background*/
 .grid-background {
     background-color: #D52941;
-    width: fit-content;
-    height: fit-content;
     font-size: 20pt;
-    display: flexbox;
+    position: relative;;
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+    justify-content: center;
+
   }
   
+  /*Content Block for user photo*/
   .grid-container {
-    background-color: grey;
+    background-image: url("/images/waves.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: 20pt;
     margin: 15px;
-    height: fit-content;
-    width: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px;
-    grid-gap: 1px;
+    display: block;
+    justify-content: center;
+    margin-block-end: 10px;
+    background-color: white;
+    viewport-fit: 100%;
+    min-height: 400px;
+    border-radius: 5px;
+    padding: 10px;
+  
   
   }
 
+   /*Content Block for user info*/
   .grid-container2 {
-    background-color: grey;
+    background-image: url("/images/waves.jpg");
     font-size: 10pt;
     margin: 15px;
+    display: block;
+    justify-content: center;
+    margin-block-end: 10px;
+    background-color: white;
+    viewport-fit: 100%;
     height: fit-content;
-    width: viewport;
+    border-radius: 5px;
+    padding: 10px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 160px;
   }
 
     .footerID{
@@ -58,8 +70,7 @@ div{
     }
   
   @media screen and (max-width: 300px){
-    .grid-background{
-      display: block;
+    
     }
   }
 
