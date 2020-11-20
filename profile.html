@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./styles/profile.css">
+  <link rel="stylesheet" href="./styles/my_app_palette3.css">
 
   <!-- Copied from firebase documentation -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
@@ -20,7 +21,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="profile.html"><img src="./images/usericon.png" alt="icon" id=icon></a>
+    <a class="navbar-brand" href="profile.html"><img src="./images/usericon-2.png" alt="icon" id=icon></a>
 
     <!--Dropdown button center to change to groups-->
     <div class="navbar-brand">
@@ -29,7 +30,7 @@
 
     <!--Dropdown button Top Right-->
     <div class="dropdown">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"><span
+      <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"><span
           class="navbar-toggler-icon"></span>
         <div class="dropdown-content">
           <a href="matches.html">Matches</a>
@@ -41,16 +42,16 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="matches.html">Matches</a>
+          <a class="nav-link" href="matches.html"><span id="matches">Matches</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="messages.html">Messages</a>
+          <a class="nav-link" href="messages.html"><span id="messages">Messages</span></a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <img src='https://dummyimage.com/800x800/000/ffffff&text=Profile+Picture' alt='profile picture' id='circle'>
+  <img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>
   <a class="btn btn-secondary" href=# role="button">Change Profile Picture</a>
 
   <form>
@@ -69,7 +70,7 @@
     <input type="text" id="Province" name="Province" placeholder="Province"><br>
 
     <h1>Fitness Interests</h1>
-    <p>Activites you’re interested in will be added as tags to your profile.</p>
+    <p>Activities you’re interested in will be added as tags to your profile.</p>
 
     <input type="text" id="Activity-1" name="Activity-1" placeholder="#Activity 1"><br>
     <select id="SkillLevel-1" name="SkillLevel-1">
@@ -77,9 +78,8 @@
       <option value="Intermediate">Intermediate</option>
       <option value="Expert">Expert</option>
     </select><br>
-    <input type="submit" value="Save">
   </form>
-  <h1></h1>
+  <a class="btn btn-secondary" id="save" href=# role="button">Save</a>
 
   <script src="./scripts/firebase_api_fitmatch.js"> </script>
   <script src="./scripts/readUserName.js"> </script>

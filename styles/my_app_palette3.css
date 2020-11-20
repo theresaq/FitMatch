@@ -1,0 +1,24 @@
+.bg-dark {
+    background-color: #ee964b !important;
+  }
+
+.btn-secondary {
+    color:#fff;
+    background-color: #0d3b66;
+    border-color: #0d3b66;
+}
+
+#matches, #messages, #UserName{
+    color: #faf0ca;
+}
+
+.btn-primary {
+    color:black;
+    background-color: #f4d35e;
+    border-color: #f4d35e;
+  }
+
+  h1 {
+      color: #EE964B;
+      font-weight: 600;
+  }

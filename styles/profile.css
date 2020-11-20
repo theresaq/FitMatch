@@ -89,6 +89,12 @@ label {
     padding-bottom: 0px;
 }
 
-input, select {
+input,
+select {
     margin-top: 10px;
+}
+
+#save {
+    width: 100px;
+    border-radius: 20px;
 }
