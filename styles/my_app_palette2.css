@@ -1,0 +1,21 @@
+.btn {
+    color: #61c9a8;
+  }
+
+  .bg-dark {
+    background-color: #ba3b46!important;
+  }
+
+  #instruc {
+    color: #ffeedb;
+  }
+
+  #app-name {
+    background-color: #ba3b46 !important;
+  }
+
+  span {
+    color: #ed9b40;
+    background-color: #aa8f66;
+    border-color: #aa8f66;
+  }
