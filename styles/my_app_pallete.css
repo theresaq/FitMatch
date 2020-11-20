@@ -3,19 +3,29 @@
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: 0.3rem;
-    color: #FFF8E8;
+    color: #FCD581;
   }
 
   .navbar-light .navbar-brand {
-    color: #FAF0CA;
+    color: #FCD581;
   }
 
   .bg-dark {
     background-color: #F95738 !important;
   }
 
+  .bg-light {
+    background-color: #990D35 !important;
+  }
+
   .btn-primary {
-    color: #fff;
+    color: #FCD581;
+    background-color: #FCD581;
+    border-color: #990D35;
+  }
+
+  .btn-secondary {
+    color: #FCD581;
     background-color: #990D35;
     border-color: #990D35;
   }
