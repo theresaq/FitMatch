@@ -52,7 +52,8 @@
   </nav>
 
   <!--UPLOAD PROFILE PICTURE-->
-  <img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>
+  <!--<img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>-->
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <main class="main_full">
     <div class="container">
@@ -67,7 +68,7 @@
         </div>
       </div>
       <div class="error_msg"></div>
-      <div class="uploaded_file_view" id="uploaded_view">
+      <div class="uploaded_file_view" id='uploaded_view'>
         <span class="file_remove">X</span>
       </div>
     </div>
@@ -92,7 +93,7 @@
 			},3000);
 			var uploadedFile = URL.createObjectURL(e.target.files[0]);
 			setTimeout(function(){
-				$("#uploaded_view").append('<img src="'+uploadedFile+'" />').addClass("show");
+				$("#uploaded_view").prepend('<img src="'+uploadedFile+'" />').addClass("show");
 			},3500);
 		}
 	});
@@ -101,10 +102,9 @@
 		$("#uploaded_view").find("img").remove();
 		btnOuter.removeClass("file_uploading");
 		btnOuter.removeClass("file_uploaded");
+    //.uploaded_file_view img
 	});
   </script>
-
-
   
   <!---->
   <form>
