@@ -120,8 +120,13 @@ div{
       text-align: center;
     }
 
+<<<<<<< HEAD
     #footer {
       display: none;
+=======
+    #footerID {
+      
+>>>>>>> b135aec566d57588795f0e32f813883a9224ce67
     }
   }
 
