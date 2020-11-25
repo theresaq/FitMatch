@@ -29,3 +29,8 @@
     background-color: #990D35;
     border-color: #990D35;
   }
+
+  .fas, .far {
+    color: black;
+    font-size: 2em;
+  }

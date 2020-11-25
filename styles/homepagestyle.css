@@ -59,16 +59,6 @@ div{
     padding: 10px;
 
   }
-
-    .footerID{
-      font-size: 10pt;
-      text-align: center;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      viewport-fit: 100%;
-    
-    }
   
   @media screen and (max-width: 300px){
     
@@ -124,19 +114,13 @@ div{
     color: #FCD581;
   }
 
-  #footerID img{
-    width: 50px;
-    height: 50px;
-    viewport-fit: 100%;
-  }
-
   @media screen and (min-width: 1000px) {
     .dropdown-individual{
       position: relative;
       text-align: center;
     }
 
-    #footerID {
+    #footer {
       display: none;
     }
   }
@@ -153,4 +137,12 @@ div{
   
   .dropdown-individual:hover .dropdown-content-individual {
     display: block;
+  }
+
+  body {
+    padding-bottom: 50px;
+  }
+
+  footer {
+    height: 50px;
   }
