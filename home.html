@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Finder Home Page</title>
     <meta name="comp1800 boilerplate code" content="COMP 1800 project">
-    <meta name="author" content="Kevin">
+    <meta name="author" content="Group 25">
 
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,8 +15,16 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
 
+
     <!-- Optional CSS of your own -->
     <link type="text/css" rel="stylesheet" href="styles/my_app_pallete.css" />
+    
+    <!-- Copied from firebase documentation -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
 
 </head>
 
@@ -48,7 +56,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="matches.html">Matches</a>
+                    <a class="nav-link" href="home.html">Matches</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="messages.html">Messages</a>
@@ -58,23 +66,33 @@
     </nav>
 
     <div class="grid-background">
-        <div class="grid-container">User Photo</div>
-        <div class="grid-container2">
-            <div>Name</br>Age</br>Location # kilometers away</div>
+        <div class="grid-container"><img src="images/profilepic.jpg" class="img-fluid" alt="Responsive image"
+                class="img-thumbnail"></div>
+
+        <div class="navbar bottom justify-content-around grid-container2">
+            
+            <div><span id="UserName">User Name</span></div>
+            <div><span id="Gender">Gender</span></div>
+            <div><span id="Age">Age</span></div>
+            <div><span id="City">City</span></div>
+            <div><br><br><br>Main Activity: <span id="activity1">activity1</span><br>Skill Level: <span id="skill1">Skill1</span></div>
 
         </div>
-        <!-- Footer -->
-        <footer class="navbar justify-content-around">
-            <div style="background-color: #F95738;">
-                <div id="footerID">
-                    <a href="home.html"><img src="./images/home-icon.png" alt="Home"></a>
-                    <a href="search.html"><img src="./images/search-icon.png" alt="Search"></a>
-                    <a href="home.html"><img src="./images/notification-icon.png" alt="Notifications"></a>
-                    <a href="home.html"><img src="./images/back-icon.png" alt="Back"></a>
-                </div>
-            </div>
-        </footer>
-        <!-- Footer -->
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="navbar fixed-bottom justify-content-around bg-dark">
+
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="search.html"><i class="fas fa-search"></i></a>
+        <a href="home.html"><i class="far fa-bell"></i></a>
+        <a href="home.html"><i class="fas fa-arrow-left"></i></a>
+
+    </footer>
+    <!-- Footer -->
+    <script src="./scripts/firebase_api_fitmatch.js"> </script>
+    <script src="./scripts/readUserName.js"> </script>
+    <script src="./scripts/readProfileData.js"> </script>
+
 </body>
 
 </html>

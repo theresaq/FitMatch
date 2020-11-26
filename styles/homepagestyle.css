@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap');
+ 
+
+html{
+  font-family: 'Work Sans', sans-serif;
+}
 div{
     color: black;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 .back{
-  background-color: #D52941;
+  background-color: #0d3b66;
   height: fit-content;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,45 +22,46 @@ div{
 
 /*Color pallette grid background*/
 .grid-background {
-    background-color: #D52941;
+    background-color: #0d3b66;
     font-size: 20pt;
     position: relative;
     margin-block-start: 20px;
     margin-block-end: 20px;
     justify-content: center;
     viewport-fit: 100%;
-
   }
   
   /*Content Block for user photo*/
-  .grid-container {
-    background-image: none;
+   .grid-container {
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: initial;
     font-size: 20pt;
     margin: 15px;
     display: block;
     justify-content: center;
     margin-block-end: 10px;
-    background-color: white;
+    /* background-color: white; */
     viewport-fit: 100%;
     min-height: 500px;
-    border-radius: 5px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
     padding: 10px;
-  
-  
-  }
+  } 
 
    /*Content Block for user info*/
   .grid-container2 {
     background-color: #FCD581;
-    font-size: 10pt;
+    color: #ee964b;
+    font-size: 13pt;
     margin: 15px;
     display: block;
     justify-content: center;
     margin-block-end: 10px;
     viewport-fit: 100%;
-    min-height: 100px;
+    min-height: 200px;
     border-radius: 5px;
     padding: 10px;
 
@@ -62,7 +69,6 @@ div{
   
   @media screen and (max-width: 300px){
     
-
   }
 
   /*Dropdown button*/
@@ -75,11 +81,18 @@ div{
     display: none;
     position: absolute;
     right: 0;
-    background-color: #D52941;
+    background-color: #faf0ca;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
+
+.btn-primary {
+  color:black;
+  background-color: #f4d35e;
+  border-color: #f4d35e;
+}
+
   
   .dropdown-content a {
     color: black;
@@ -95,14 +108,15 @@ div{
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #fafdfa;
+    background-color: #FCD581;
   }
 
   .navbar-toggler {
-    background-color: #aaa5a5;
+    background-color: white;
     color: white;
     padding: 10px;
     font-size: 10px;
+    font-weight: 500;
     border: none;
     cursor: pointer;
   }
@@ -114,21 +128,20 @@ div{
     color: #FCD581;
   }
 
-  @media screen and (min-width: 1000px) {
+  .navbarTogglerDemo02{
+    background-color: white;
+    color: white;
+  }
+
+  @media screen and (max-width: 400px) {
     .dropdown-individual{
       position: relative;
       text-align: center;
     }
-
-<<<<<<< HEAD
     #footer {
-      display: none;
-=======
-    #footerID {
-      
->>>>>>> b135aec566d57588795f0e32f813883a9224ce67
+      display: flex;
     }
-  }
+  } 
 
   .dropdown-content-individual{
     display: none;
@@ -146,8 +159,4 @@ div{
 
   body {
     padding-bottom: 50px;
-  }
-
-  footer {
-    height: 50px;
   }

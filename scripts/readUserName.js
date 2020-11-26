@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 document.getElementById("UserName").innerText = snap.data().name;
             })
         }
-        
+
         readUserName();
     } else {
       // do nothing
