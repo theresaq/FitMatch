@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="/images/droplet-icon-2.png" type="image/x-icon" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet">
 
   <!-- Copied from firebase documentation -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
@@ -22,6 +22,7 @@
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
 </head>
 
 <body>
@@ -79,32 +80,36 @@
   <!-- Uploads Profile Picture-->
   <script>
     var btnUpload = $("#upload_file"),
-		btnOuter = $(".button_outer");
-	  btnUpload.on("change", function(e){
-		var ext = btnUpload.val().split('.').pop().toLowerCase();
-		if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
-			$(".error_msg").text("Not an Image...");
-		} else {
-			$(".error_msg").text("");
-			btnOuter.addClass("file_uploading");
-			setTimeout(function(){
-				btnOuter.addClass("file_uploaded");
-			},3000);
-			var uploadedFile = URL.createObjectURL(e.target.files[0]);
-			setTimeout(function(){
-				$("#uploaded_view").prepend('<img src="'+uploadedFile+'" />').addClass("show");
-			},3500);
-		}
-	});
-	$(".file_remove").on("click", function(e){
-		$("#uploaded_view").removeClass("show");
-		$("#uploaded_view").find("img").remove();
-		btnOuter.removeClass("file_uploading");
-		btnOuter.removeClass("file_uploaded");
-    //.uploaded_file_view img
-	});
+      btnOuter = $(".button_outer");
+    btnUpload.on("change", function (e) {
+      var ext = btnUpload.val().split('.').pop().toLowerCase();
+      if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+        $(".error_msg").text("Not an Image...");
+      } else {
+        $(".error_msg").text("");
+        btnOuter.addClass("file_uploading");
+        setTimeout(function () {
+          btnOuter.addClass("file_uploaded");
+        }, 3000);
+        var uploadedFile = (e.target.files[0]);
+        var user = firebase.auth().currentUser;
+        var storageRef = firebase.storage().ref(user + 'profilePictures/' + uploadedFile.name);
+        console.log(storageRef);
+        var task = storageRef.put(uploadedFile);
+        setTimeout(function () {
+          $("#uploaded_view").prepend('<img src="' + uploadedFile + '" />').addClass("show");
+        }, 3500);
+      }
+    });
+    $(".file_remove").on("click", function (e) {
+      $("#uploaded_view").removeClass("show");
+      $("#uploaded_view").find("img").remove();
+      btnOuter.removeClass("file_uploading");
+      btnOuter.removeClass("file_uploaded");
+      //.uploaded_file_view img
+    });
   </script>
-  
+
   <!---->
   <form>
     <h1>Personal Information</h1>
