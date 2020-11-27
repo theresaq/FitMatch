@@ -3,13 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>User Profile</title>
+  <title>FitMatch Profile Page</title>
 
   <!-- Bootstrap for Mobile-first, and JQuery -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./styles/profile.css">
   <link rel="stylesheet" href="./styles/my_app_palette3.css">
+
+  <link rel="shortcut icon" href="/images/droplet-icon-2.png" type="image/x-icon" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet"> 
@@ -33,7 +35,7 @@
 
     <!--Dropdown button Top Right-->
     <div class="dropdown">
-      <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
         <span class="navbar-toggler-icon"></span>
         <div class="dropdown-content">
           <a href="home.html">Matches</a>
@@ -45,7 +47,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="matches.html"><span id="matches">Matches</span></a>
+          <a class="nav-link" href="home.html"><span id="matches">Matches</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="messages.html"><span id="messages">Messages</span></a>
@@ -53,9 +55,6 @@
       </ul>
     </div>
   </nav>
-
-  <!--UPLOAD PROFILE PICTURE-->
-  <!--<img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>-->
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <main class="main_full">
@@ -77,10 +76,7 @@
     </div>
   </main>
 
-  <!--<img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>
-  <a class="btn btn-secondary" href=# role="button">Change Profile Picture
-  </a>
-  -->
+  <!-- Uploads Profile Picture-->
   <script>
     var btnUpload = $("#upload_file"),
 		btnOuter = $(".button_outer");

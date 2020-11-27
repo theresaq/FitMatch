@@ -33,6 +33,7 @@ div{
     margin-block-end: 20px;
     justify-content: center;
     viewport-fit: 100%;
+    color:  color: #ee964b;
   }
   
   /*Content Block for user photo*/
@@ -57,8 +58,8 @@ div{
 
    /*Content Block for user info*/
   .grid-container2 {
-    background-color: #FCD581;
-    color: #ee964b;
+    background-color: #faf0ca;
+    color: #ee964b !important;
     font-size: 13pt;
     margin: 15px;
     display: block;
@@ -163,4 +164,50 @@ div{
 
   body {
     padding-bottom: 50px;
+  }
+
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #FCD581;
+  }
+
+  .bg-dark {
+    background-color: #ee964b !important;
+  }
+
+.btn-secondary {
+    color:#fff;
+    background-color: #0d3b66;
+    border-color: #0d3b66;
+}
+
+#matches, #messages{
+    color: #faf0ca;
+}
+
+#username{
+
+}
+
+#username, #Gender, #Age, #City, #activity1, #skill1{
+  color: #EE964B;
+}
+
+.btn-primary {
+    color:black;
+    background-color: #f4d35e;
+    border-color: #f4d35e;
+  }
+
+  h1 {
+      color: #EE964B;
+      font-weight: 600;
+  }
+
+  .fas, .far {
+    color: black;
+    font-size: 2em;
   }
