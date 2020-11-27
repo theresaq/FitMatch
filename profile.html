@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="./styles/profile.css">
   <link rel="stylesheet" href="./styles/my_app_palette3.css">
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet"> 
+
   <!-- Copied from firebase documentation -->
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
 
@@ -30,10 +33,10 @@
 
     <!--Dropdown button Top Right-->
     <div class="dropdown">
-      <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"><span
-          class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
         <div class="dropdown-content">
-          <a href="matches.html">Matches</a>
+          <a href="home.html">Matches</a>
           <a href="messages.html">Messages</a>
         </div>
       </button>
@@ -51,9 +54,62 @@
     </div>
   </nav>
 
-  <img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>
-  <a class="btn btn-secondary" href=# role="button">Change Profile Picture</a>
+  <!--UPLOAD PROFILE PICTURE-->
+  <!--<img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>-->
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <main class="main_full">
+    <div class="container">
+      <div class="panel">
+        <div class="button_outer">
+          <div class="btn_upload">
+            <input type="file" id="upload_file" name="">
+            Upload Profile Picture
+          </div>
+          <div class="processing_bar"></div>
+          <div class="success_box"></div>
+        </div>
+      </div>
+      <div class="error_msg"></div>
+      <div class="uploaded_file_view" id="uploaded_view">
+        <span class="file_remove">X</span>
+      </div>
+    </div>
+  </main>
+
+  <!--<img src='https://dummyimage.com/800x800/faf0ca/000000&text=Profile' alt='profile picture' id='circle'>
+  <a class="btn btn-secondary" href=# role="button">Change Profile Picture
+  </a>
+  -->
+  <script>
+    var btnUpload = $("#upload_file"),
+		btnOuter = $(".button_outer");
+	  btnUpload.on("change", function(e){
+		var ext = btnUpload.val().split('.').pop().toLowerCase();
+		if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+			$(".error_msg").text("Not an Image...");
+		} else {
+			$(".error_msg").text("");
+			btnOuter.addClass("file_uploading");
+			setTimeout(function(){
+				btnOuter.addClass("file_uploaded");
+			},3000);
+			var uploadedFile = URL.createObjectURL(e.target.files[0]);
+			setTimeout(function(){
+				$("#uploaded_view").prepend('<img src="'+uploadedFile+'" />').addClass("show");
+			},3500);
+		}
+	});
+	$(".file_remove").on("click", function(e){
+		$("#uploaded_view").removeClass("show");
+		$("#uploaded_view").find("img").remove();
+		btnOuter.removeClass("file_uploading");
+		btnOuter.removeClass("file_uploaded");
+    //.uploaded_file_view img
+	});
+  </script>
+  
+  <!---->
   <form>
     <h1>Personal Information</h1>
     <label for="Gender">Gender</label><br>
@@ -64,7 +120,7 @@
     </select>
     <br>
     <label for="Birth date">Birth Date</label><br>
-    <input type="date" id="birthday" name="birthday"><br>
+    <input type="date" id="Birthday" name="birthday"><br>
     <label for="Location">Location</label><br>
     <input type="text" id="City" name="City" placeholder="City"><br>
     <input type="text" id="Province" name="Province" placeholder="Province"><br>
@@ -83,4 +139,5 @@
 
   <script src="./scripts/firebase_api_fitmatch.js"> </script>
   <script src="./scripts/readUserName.js"> </script>
+  <script src="./scripts/saveProfile.js"> </script>
 </body>

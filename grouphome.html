@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="\styles\homepagestyle.css">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
+
     <!-- Optional CSS of your own               -->
     <link type="text/css" rel="stylesheet" href="styles/my_app_pallete.css" />
 
@@ -20,27 +23,28 @@
 <body class = "back">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="profile.html" ><img src="/images/usericon.png" alt="icon" id=icon></a>
-        
-    <!--Dropdown button center to change to groups-->
+        <a class="navbar-brand" href="profile.html"><img src="/images/usericon.png" alt="icon" id=icon></a>
+
+        <!--Dropdown button center to change to groups-->
         <div class="navbar-brand">
-            <div class = "dropdown-individual">
+            <div class="dropdown-individual">
                 Groups
-                <div class = "dropdown-content-individual">
-                    <a href = "home.html">Individual</a>
+                <div class="dropdown-content-individual">
+                    <a href="home.html">Individual</a>
                 </div>
             </div>
         </div>
-    <!--Dropdown button Top Right-->
-    <div class = "dropdown">
-        <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
-            <div class = "dropdown-content">
-                <a href = "matches.html">Matches</a>
-                <a href = "messages.html">Messages</a>
-            </div>
-        </button>
-    </div>
-    
+        <!--Dropdown button Top Right-->
+        <div class="dropdown">
+            <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
+                <div class="dropdown-content">
+                    <a href="matches.html">Matches</a>
+                    <a href="messages.html">Messages</a>
+                </div>
+            </button>
+        </div>
+
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -54,22 +58,21 @@
     </nav>
 
     <div class="grid-background">
-        <div class="grid-container">User Photo</div>
+        <div class="grid-container"><img src="images/profilepic.jpg" class="img-fluid" alt="Responsive image"
+            class="img-thumbnail"></div>
         <div class="grid-container2">
             <div>Group Name</br>Age</br>Location # kilometers away</div>
 
         </div>
     </div>
     <!-- Footer -->
-    <footer class="page-footer fixed-bottom">
-        <div style="background-color: #F95738;">
-            <div id="footerID">
-                <a href="home.html"><img src="./images/home-icon.png" alt="Home"></a>
-                <a href="search.html"><img src="./images/search-icon.png" alt="Search"></a>
-                <a href="home.html"><img src="./images/notification-icon.png" alt="Notifications"></a>
-                <a href="home.html"><img src="./images/back-icon.png" alt="Back"></a>
-            </div>
-        </div>
+    <footer id="footer" class="navbar fixed-bottom justify-content-around bg-warning">
+
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="search.html"><i class="fas fa-search"></i></a>
+        <a href="home.html"><i class="far fa-bell"></i></a>
+        <a href="home.html"><i class="fas fa-arrow-left"></i></a>
+
     </footer>
     <!-- Footer -->
 </body>

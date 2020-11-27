@@ -3,19 +3,39 @@
     font-size: 1.25rem;
     line-height: 1.5;
     border-radius: 0.3rem;
-    color: #FFF8E8;
-  }
-
-  .navbar-light .navbar-brand {
-    color: #FAF0CA;
+    color: #FCD581;
   }
 
   .bg-dark {
-    background-color: #F95738 !important;
+    background-color: #ee964b !important;
   }
 
-  .btn-primary {
-    color: #fff;
-    background-color: #990D35;
-    border-color: #990D35;
+.btn-secondary {
+    color:#fff;
+    background-color: #0d3b66;
+    border-color: #0d3b66;
+}
+
+#matches, #messages, #UserName{
+    color: #faf0ca;
+}
+
+#Gender, #Age, #City, #activity1, #skill1{
+  color: #EE964B;
+}
+
+.btn-primary {
+    color:black;
+    background-color: #f4d35e;
+    border-color: #f4d35e;
+  }
+
+  h1 {
+      color: #EE964B;
+      font-weight: 600;
+  }
+
+  .fas, .far {
+    color: black;
+    font-size: 2em;
   }
