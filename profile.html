@@ -92,12 +92,12 @@
           btnOuter.addClass("file_uploaded");
         }, 3000);
         var uploadedFile = (e.target.files[0]);
+        var uploadedFileURL = URL.createObjectURL(e.target.files[0]);
         var user = firebase.auth().currentUser;
-        var storageRef = firebase.storage().ref(user + 'profilePictures/' + uploadedFile.name);
-        console.log(storageRef);
+        var storageRef = firebase.storage().ref(uploadedFile.name);
         var task = storageRef.put(uploadedFile);
         setTimeout(function () {
-          $("#uploaded_view").prepend('<img src="' + uploadedFile + '" />').addClass("show");
+          $("#uploaded_view").prepend('<img src="' + uploadedFileURL + '" />').addClass("show");
         }, 3500);
       }
     });
