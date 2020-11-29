@@ -33,7 +33,7 @@ div{
     margin-block-end: 20px;
     justify-content: center;
     viewport-fit: 100%;
-    color:  color: #ee964b;
+    color: #ee964b;
   }
   
   /*Content Block for user photo*/
@@ -42,12 +42,12 @@ div{
     background-repeat: no-repeat;
     background-position: initial;
     font-size: 20pt;
-    margin: 15px;
-    display: block;
+    /* margin: 15px; */
+    display: flex;
     justify-content: center;
     margin-block-end: 10px;
     /* background-color: white; */
-    viewport-fit: 100%;
+    /* viewport-fit: 100%; */
     min-height: 500px;
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
@@ -61,20 +61,40 @@ div{
     background-color: #faf0ca;
     color: #ee964b !important;
     font-size: 13pt;
-    margin: 15px;
-    display: block;
+    margin: 15px; 
+    display: flex;
     justify-content: center;
     margin-block-end: 10px;
     viewport-fit: 100%;
-    min-height: 200px;
+    min-height: 300px;
     border-radius: 5px;
     padding: 10px;
 
   }
   
-  @media screen and (max-width: 300px){
-    
+  @media screen and (min-width: 600px){
+    .grid-container{
+      position: sticky;
+      max-width: 570px;
+      max-height: 731px;
+      margin-left: auto;
+      margin-right: auto ;      
+    }
+
+    .grid-container2 {
+      position: sticky;
+      display: flex;
+      max-width: 570px;
+      max-height: auto;
+      margin-left: auto;
+      margin-right: auto;      
+    }
+
+    #footer {
+      display: none;
+    }
   }
+  
 
   /*Dropdown button*/
   .dropdown {
@@ -98,7 +118,6 @@ div{
   border-color: #f4d35e;
 }
 
-  
   .dropdown-content a {
     color: black;
     padding: 10px 10px;
@@ -189,11 +208,20 @@ div{
 }
 
 #username{
-
+  min-width: 1000px;
+  margin-right: 100px;
+  margin-left: auto;
 }
 
-#username, #Gender, #Age, #City, #activity1, #skill1{
+ #Gender, #Age, #City, #activity1, #skill1{
+  
+  background-color: #0d3b66;
+  display: inline-flexbox;
+  float: right;
   color: #EE964B;
+  border: 10px solid;
+  border-radius: 25px;
+  border-color: #0d3b66;
 }
 
 .btn-primary {
