@@ -29,10 +29,10 @@ div{
     background-color: #0d3b66;
     font-size: 20pt;
     position: relative;
-    margin-block-start: 20px;
-    margin-block-end: 20px;
+    /* margin-block-start: 20px;  */
+    /* margin-block-end: 20px; */
     justify-content: center;
-    viewport-fit: 100%;
+    /* height: 100vh; */
     color: #ee964b;
   }
   
@@ -48,12 +48,12 @@ div{
     margin-block-end: 10px;
     /* background-color: white; */
     /* viewport-fit: 100%; */
-    min-height: 500px;
+    max-height: 500px;
     border-top-left-radius: 150px;
     border-top-right-radius: 150px;
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    padding: 10px;
+    /* padding: 1px; */
   } 
 
    /*Content Block for user info*/
@@ -65,27 +65,60 @@ div{
     display: flex;
     justify-content: center;
     margin-block-end: 10px;
-    viewport-fit: 100%;
+    /* viewport-fit: 100%; */
     min-height: 300px;
     border-radius: 5px;
     padding: 10px;
 
   }
-  
-  @media screen and (min-width: 600px){
+
+  @media screen and (max-width: 624px){
+    aside {
+      display: none;
+      
+    }
+
+  }
+
+  /* Responsive Design for 625px and above */
+  @media screen and (min-width: 625px){
+
+    .mobile{
+      display: none;
+    }
+
+    .grid-background{
+      margin-block-start: -20px;
+    }
+
+    aside {
+      height: 100vh;
+      min-width: 280px;
+      max-width: 500px;
+      float: left;
+      background-color: #faf0ca;
+      display: block;
+    }
+
+    aside nav .navbar{
+      display: block;
+    }
+
     .grid-container{
-      position: sticky;
-      max-width: 570px;
-      max-height: 731px;
+      /* position: fixed; */
+      position: static;
+      max-width: 375px;
+      max-height: 631px;
       margin-left: auto;
       margin-right: auto ;      
     }
 
     .grid-container2 {
-      position: sticky;
+      margin-block-start: 40px;
+      /* position: static; */
       display: flex;
-      max-width: 570px;
-      max-height: auto;
+      max-width: 375px;
+      max-height: 100px;
       margin-left: auto;
       margin-right: auto;      
     }
@@ -94,7 +127,20 @@ div{
       display: none;
     }
   }
-  
+
+  /* Laptop smaller heights */
+  @media screen and (max-height: 769px){
+    .grid-container{
+      max-width: 375px;
+      max-height: 431px;
+    }
+
+    .grid-container2{
+      max-width: 375px;
+      max-height: 328px;
+    }
+     
+  }
 
   /*Dropdown button*/
   .dropdown {
@@ -213,6 +259,10 @@ div{
   margin-left: auto;
 }
 
+#activity1, #skill1{
+  margin-top: -12px;
+}
+
  #Gender, #Age, #City, #activity1, #skill1{
   
   background-color: #0d3b66;
@@ -238,4 +288,63 @@ div{
   .fas, .far {
     color: black;
     font-size: 2em;
+  }
+
+
+
+  /* NAV BAR INSIDE OF THE ASIDE */
+  @media (max-width: 1480px) {
+    .navbar-expand-lg > .container,
+    .navbar-expand-lg > .container-fluid {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  
+  @media (min-width: 1480px) {
+    .navbar-expand-lg {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+    .navbar-expand-lg .navbar-nav {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu-right {
+      right: 0;
+      left: auto;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    .navbar-expand-lg > .container,
+    .navbar-expand-lg > .container-fluid {
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+    }
+    .navbar-expand-lg .navbar-collapse {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+    }
+    .navbar-expand-lg .navbar-toggler {
+      display: none;
+    }
+    .navbar-expand-lg .dropup .dropdown-menu {
+      top: auto;
+      bottom: 100%;
+    }
   }

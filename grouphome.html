@@ -59,10 +59,16 @@
     </nav>
 
     <div class="grid-background">
-        <div class="grid-container"><img src="images/profilepic.jpg" class="img-fluid" alt="Responsive image"
-            class="img-thumbnail"></div>
-        <div class="grid-container2">
-            <div>Group Name</br>Age</br>Location # kilometers away</div>
+        <div class="grid-container"><img src="images/profilepic.jpg" 
+                class="img-thumbnail"></div>
+
+        <div class="navbar bottom justify-content-around grid-container2">
+            
+            <div><span id="UserName">User Name</span></div>
+            <div><span id="Gender">Gender</span></div>
+            <div><span id="Age">Age</span></div>
+            <div><span id="City">City</span></div>
+            <div><br><br>Main Activity: <span id="activity1">activity1</span><br><br>Skill Level: <span id="skill1">Skill1</span></div>
 
         </div>
     </div>
@@ -75,7 +81,10 @@
         <a href="home.html"><i class="fas fa-arrow-left"></i></a>
 
     </footer>
-    <!-- Footer -->
+     <!-- Footer -->
+     <script src="./scripts/firebase_api_fitmatch.js"> </script>
+     <!-- <script src="./scripts/readUserName.js"> </script> -->
+     <script src="./scripts/readProfileData.js"> </script>
 </body>
 
 </html>

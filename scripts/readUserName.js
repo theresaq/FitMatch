@@ -4,6 +4,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             db.collection("users").doc(user.uid)
             .onSnapshot(function(snap){
                 document.getElementById("UserName").innerText = snap.data().name;
+
             })
         }
 
