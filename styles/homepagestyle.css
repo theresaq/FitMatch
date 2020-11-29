@@ -17,23 +17,18 @@ div{
 
 .back{
   background-color: #0d3b66;
-  height: fit-content;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;  
 }
 
-
+/* CENTER CARDS */
 .info{
   display: flex;
   justify-content: center;
 }
-
-/* .card .card1{
-  width: 30rem; margin-right: 5px; margin-left: 5px; margin-top: auto;
-  background-color: #f4d35e;
-} */
 
 /*Color pallette grid background*/
 .grid-background {
@@ -80,19 +75,51 @@ div{
     min-height: 300px;
     border-radius: 5px;
     padding: 10px;
-
   }
 
+  /* Mobile first card */
+.card{
+  width: 30rem; margin-right: 5px; margin-left: 5px; margin-top: auto; background-color: #faf0ca;
+}
+
+.overlay{
+  position: relative; bottom: 50px; left: 10px; color:white; font-size: 25pt; font-weight: bolder;
+  
+}
+
+.card-text{
+  font-size: 18pt;
+
+}
+
+/* Make aside and when it enters mobile mode */
   @media screen and (max-width: 624px){
     aside {
       display: none;
-      
     }
-
   }
 
   /* Responsive Design for 625px and above */
   @media screen and (min-width: 625px){
+
+    /* Desktop card */
+    .card{
+      width: 375px;
+      height: auto;
+    }
+
+    .card-body{
+      margin-block-start: -30px;
+    }
+
+    .card-text{
+      font-size: 15pt;
+  
+    }
+
+    .info{
+      padding-top: 30px;
+    }
 
     .mobile{
       display: none;
@@ -103,7 +130,8 @@ div{
     }
 
     aside {
-      height: 100vh;
+      padding-top: 10px;
+      height: 101vh;
       min-width: 280px;
       max-width: 500px;
       float: left;
@@ -170,19 +198,21 @@ div{
   }
 
 .btn-primary {
-  color:black;
+  color:#0d3b66;
   background-color: #f4d35e;
   border-color: #f4d35e;
 }
 
   .dropdown-content a {
-    color: black;
+    color: #0d3b66;
     padding: 10px 10px;
     text-decoration: none;
     display: block;
   }
   
   .dropdown-content a:hover {background-color: #f1f1f1;}
+
+  .navbar-toggler a:hover {background-color: #f1f1f1;}
   
   .dropdown:hover .dropdown-content {
     display: block;
@@ -192,9 +222,10 @@ div{
     background-color: #FCD581;
   }
 
+  /* CHANGE THE COLOR OF THE BUTTON */
   .navbar-toggler {
-    background-color: white;
-    color: white;
+    background-color: #0d3b66;
+    color: #0d3b66;
     padding: 10px;
     font-size: 10px;
     font-weight: 500;
@@ -209,9 +240,9 @@ div{
     color: #FCD581;
   }
 
-  .navbarTogglerDemo02{
+  #navbarTogglerDemo02{
     background-color: white;
-    color: white;
+    color: black;
   }
 
   @media screen and (max-width: 400px) {
@@ -227,7 +258,8 @@ div{
   .dropdown-content-individual{
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #FCD581;
+    color: #0d3b66;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
@@ -255,9 +287,17 @@ div{
   }
 
 .btn-secondary {
-    color:#fff;
+    color:#b41818;
     background-color: #0d3b66;
     border-color: #0d3b66;
+}
+
+.ml-auto{
+  background-color: #EE964B;
+}
+
+.collapse .navbar-collapse{
+  background-color: #EE964B;
 }
 
 #matches, #messages{
@@ -275,13 +315,19 @@ div{
       font-weight: 600;
   }
 
+
   /* ICONS */
-  .fas, .far {
-    color: black;
+   .fas, .far {
+    color: #0d3b66;
     font-size: 2em;
   }
 
 .fa-heart {
+  font-size: 35px;
+  color: #EE964B;
+}
+
+.fa-times-circle{
   font-size: 35px;
   color: #EE964B;
 }
@@ -298,12 +344,13 @@ div{
  font-size: 25px;
   color: #EE964B;
 }
-.fa-user{
-  font-size: 25px;
-   color: #EE964B;
+
+  .fa-user{
+   color: #0d3b66;
  }
 
-  /* NAV BAR INSIDE OF THE ASIDE */
+
+  /* NAV BAR INSIDE OF THE ASIDE  FOR DESKTOP*/
   @media (max-width: 1480px) {
     .navbar-expand-lg > .container,
     .navbar-expand-lg > .container-fluid {

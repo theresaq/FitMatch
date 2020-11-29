@@ -35,20 +35,21 @@
     <!-- MOBILE FIRST DESIGN -->
     <div class="mobile">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="profile.html"><img src="/images/usericon.png" alt="icon" id=icon></a>
+            <a class="navbar-brand" href="profile.html"><i class="far fa-user"></i></a>
 
             <!-- Dropdown button center to change to groups-->
             <div class="navbar-brand">
-                <div class="dropdown-individual">
+                <div class="dropdown-individual" style="color: #faf0ca;">
                     Individual
-                    <div class="dropdown-content-individual">
+                    <div class="dropdown-content-individual" style="color: #0d3b66;">
                         <a href="grouphome.html">Groups</a>
                     </div>
                 </div>
             </div>
             <!-- Dropdown button Top Right to go to matches or messages-->
             <div class="dropdown">
-                <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse"
+                <!-- navbar-toggler CHANGES THE COLOR  -->
+                <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
                     <div class="dropdown-content">
                         <a href="matches.html">Matches</a>
@@ -77,20 +78,21 @@
         <div>
             <aside>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="profile.html"><img src="/images/usericon.png" alt="icon" id=icon></a>
+                    <a class="navbar-brand" href="profile.html"><i class="far fa-user"></i></a>
 
                     <!--Dropdown button center to change to groups-->
                     <div class="navbar-brand">
-                        <div class="dropdown-individual">
+                        <div class="dropdown-individual" style="color: #faf0ca;">
                             Individual
-                            <div class="dropdown-content-individual">
+                            <div class="dropdown-content-individual" style="color: #0d3b66;">
                                 <a href="grouphome.html">Groups</a>
                             </div>
                         </div>
                     </div>
                     <!--Dropdown button Top Right to go to matches or messages-->
                     <div class="dropdown">
-                        <button class="navbar-toggler btn-primary" type="button" data-toggle="collapse"
+                         <!-- navbar-toggler CHANGES THE COLOR  -->
+                        <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
                             data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
                             <div class="dropdown-content">
                                 <a href="matches.html">Matches</a>
@@ -116,34 +118,26 @@
 
         <!-- OTHER USER CARD -->
         <div class="info">
-            <div class="card card1" style="width: 30rem; margin-right: 5px; margin-left: 5px; margin-top: auto; background-color: #faf0ca;">
+            <div class="card">
                 <img src="images/profilepic.jpg" class="card-img-top" alt="profilepic">
 
                 <!-- class = "card-img-overlay text-white" -->
-                <div style=" position: relative; bottom: 50px; left: 10px; color:white; font-size: x-large; font-weight: bolder;">
-                    <span id = "UserName">User Name</span>
-                    <span id="Age" style="font-size: large;">Age </span><i class="far fa-heart"></i></div>
+                <div class = "overlay">
+                    <span id="UserName">User Name</span>
+                    <span id="Age" style="font-size: large;">Age </span><i class="far fa-heart" style = "padding-left: 40px;"></i><i class="far fa-times-circle" style = "padding-left: 10px;"></i></div>
 
                 <div class="card-body">
                     <!-- <i class="fas fa-heart"></i> -->
-                    <p class="card-text" style="color: #0d3b66;"><i class="fas fa-user"></i> <span id="Gender"> Gender</span><br><i class="fas fa-house-user"></i>Lives in <span id="City">City</span>
+                    <p class="card-text" style="color: #0d3b66;"><i class="fas fa-user" style="font-size: 1em;"></i>
+                        <span id="Gender"> Gender</span><br><i class="fas fa-house-user"></i>Lives in <span
+                            id="City">City</span>
                         <br><br><i class="fas fa-bicycle"></i> Main Activity
-                        <span id="activity1">activity1</span><br><i class="fas fa-brain"></i> Skill Level <span id="skill1">skill1</span></p>
+                        <span id="activity1">activity1</span><br><i class="fas fa-brain"></i> Skill Level <span
+                            id="skill1">skill1</span></p>
                 </div>
             </div>
 
-            <!-- <div class="grid-container"><img src="images/profilepic.jpg" class="img-thumbnail"></div>
-
-            <div class="navbar bottom justify-content-around grid-container2">
-
-                <div><span id="UserName">User Name</span></div>
-                <div><span id="Gender">Gender</span></div>
-                <div><span id="Age">Age</span></div>
-                <div><span id="City">City</span></div>
-                <div>Main Activity: <span id="activity1">activity1</span><br><br>Skill Level: <span
-                        id="skill1">Skill1</span></div>
-
-            </div> -->
+        
         </div>
     </div>
     <!-- Footer -->
