@@ -91,11 +91,22 @@
         setTimeout(function () {
           btnOuter.addClass("file_uploaded");
         }, 3000);
+        
         var uploadedFile = (e.target.files[0]);
         var uploadedFileURL = URL.createObjectURL(e.target.files[0]);
         var user = firebase.auth().currentUser;
-        var storageRef = firebase.storage().ref(uploadedFile.name);
+        var storageRef = storage.ref(user.displayName + '/ProfilePicture/' + uploadedFile.name);
+        console.log(storageRef);
         var task = storageRef.put(uploadedFile);
+
+        user.updateProfile({
+          photoURL: storageRef
+        }).then(function () {
+          console.log("User profile picture successfully updated.")
+        }).catch(function (error) {
+          console.log("Error updating profile picture.")
+        });
+
         setTimeout(function () {
           $("#uploaded_view").prepend('<img src="' + uploadedFileURL + '" />').addClass("show");
         }, 3500);
@@ -142,4 +153,5 @@
   <script src="./scripts/firebase_api_fitmatch.js"> </script>
   <script src="./scripts/readUserName.js"> </script>
   <script src="./scripts/saveProfile.js"> </script>
+  <script src="./scripts/readProfileData.js"></script>
 </body>
