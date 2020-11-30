@@ -17,7 +17,7 @@ div{
 
 .back{
   background-color: #0d3b66;
-  height: 100vh;
+  height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,6 +106,10 @@ div{
     .card{
       width: 375px;
       height: auto;
+    }
+
+    .back{
+      height: 100vh;
     }
 
     .card-body{
@@ -315,6 +319,10 @@ div{
       font-weight: 600;
   }
 
+  .heart {
+      font-size: 35px;
+      color: #EE964B;
+  }
 
   /* ICONS */
    .fas, .far {
@@ -322,12 +330,13 @@ div{
     font-size: 2em;
   }
 
-.fa-heart {
-  font-size: 35px;
-  color: #EE964B;
-}
+  .skip{
+    background-color: transparent;
+    border-collapse: collapse;
+    border-width: 0px;
+  }
 
-.fa-times-circle{
+.fa-fast-forward{
   font-size: 35px;
   color: #EE964B;
 }
@@ -344,11 +353,9 @@ div{
  font-size: 25px;
   color: #EE964B;
 }
-
   .fa-user{
    color: #0d3b66;
  }
-
 
   /* NAV BAR INSIDE OF THE ASIDE  FOR DESKTOP*/
   @media (max-width: 1480px) {

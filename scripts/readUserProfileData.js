@@ -1,3 +1,4 @@
+
 // Function to get user from the db and display in the homepage
 firebase.auth().onAuthStateChanged(function(user){
     if (user) {
