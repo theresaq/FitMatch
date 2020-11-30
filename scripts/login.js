@@ -16,7 +16,7 @@ var uiConfig = {
                         activity1:null,
                         skill1:null,
                         hearts:[],
-                        photoURL:null
+                        photo:null
                     }).then(function () {
                         console.log("New user added to firestore");
                         window.location.assign("profile.html");

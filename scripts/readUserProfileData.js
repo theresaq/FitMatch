@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(function(user){
     if (user) {
         function getUsersWithQuery(){
             db.collection("users")
-            .where("gender", "==", "Female")
+            .where("activity1", "==", "Soccer")
             .get()
             .then (function(snap){
                 snap.forEach(function(doc){
@@ -15,7 +15,10 @@ firebase.auth().onAuthStateChanged(function(user){
                     document.getElementById("City").innerText = doc.data().city;
                     document.getElementById("activity1").innerText = doc.data().activity1;
                     document.getElementById("skill1").innerText = doc.data().skill1;
+                    var picUrl = doc.data().photo;
+                    $("#card").after("<img src='" + picUrl + "' class='card-img-top'>")
                 })
+                
             })
         }
         getUsersWithQuery();

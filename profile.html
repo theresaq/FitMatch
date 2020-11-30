@@ -95,17 +95,16 @@
         var uploadedFile = (e.target.files[0]);
         var uploadedFileURL = URL.createObjectURL(e.target.files[0]);
         var user = firebase.auth().currentUser;
-        var storageRef = firebase.storage().ref(user.displayName + '/ProfilePicture/' + uploadedFile.name);
+        var storageRef = firebase.storage().ref("images/" + user.uid + uploadedFile.name);
         console.log(storageRef);
-        var task = storageRef.put(uploadedFile);
-
-        user.updateProfile({
-          photoURL: storageRef
-        }).then(function () {
-          console.log("User profile picture successfully updated.")
-        }).catch(function (error) {
-          console.log("Error updating profile picture.")
-        });
+        storageRef.put(uploadedFile);
+        storageRef.getDownloadURL()
+        .then(function(url){
+          console.log(url);
+          db.collection("users").doc(user.uid).update({
+            photo: url
+          })
+        })
 
         setTimeout(function () {
           $("#uploaded_view").prepend('<img src="' + uploadedFileURL + '" />').addClass("show");
