@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(function(user){
     if (user) {
         function getUsersWithQuery(){
             db.collection("users")
-            .where("activity1", "==", "Soccer")
+            .where("activity1", "==", "Badminton")
             .get()
             .then (function(snap){
                 snap.forEach(function(doc){
@@ -16,7 +16,8 @@ firebase.auth().onAuthStateChanged(function(user){
                     document.getElementById("activity1").innerText = doc.data().activity1;
                     document.getElementById("skill1").innerText = doc.data().skill1;
                     var picUrl = doc.data().photo;
-                    $("#card").after("<img src='" + picUrl + "' class='card-img-top'>")
+                    // CHANGED SO THAT THE IMAGE IS PUT INSIDE OF THE CARD , BEFORE THE OVERLAY ID
+                    $("#overlay").before("<img src='" + picUrl + "' class='card-img-top'>")
                 })
                 
             })

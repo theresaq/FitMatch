@@ -92,6 +92,12 @@ div{
 
 }
 
+/* IMAGE SIZE FOR THE UPLOADED PICTURE */
+.card-img-top{
+  width: 375px;
+  height: auto;
+}
+
 /* Make aside and when it enters mobile mode */
   @media screen and (max-width: 624px){
     aside {
@@ -122,7 +128,7 @@ div{
     }
 
     .info{
-      padding-top: 30px;
+      padding-top: 100px;
     }
 
     .mobile{
