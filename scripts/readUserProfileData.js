@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user){
                     document.getElementById("activity1").innerText = doc.data().activity1;
                     document.getElementById("skill1").innerText = doc.data().skill1;
                     var picUrl = doc.data().photo;
-                    $("#card").after("<img src='" + picUrl + "' class='card-img-top'>")
+                    //$("#profilepic").append("<img src='" + picUrl + "'>")
                 })
                 
             })
