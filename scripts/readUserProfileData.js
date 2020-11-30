@@ -18,6 +18,7 @@ firebase.auth().onAuthStateChanged(function(user){
                     var picUrl = doc.data().photo;
                     // CHANGED SO THAT THE IMAGE IS PUT INSIDE OF THE CARD , BEFORE THE OVERLAY ID
                     $("#overlay").before("<img src='" + picUrl + "' class='card-img-top'>")
+                    //$("#profilepic").append("<img src='" + picUrl + "'>")
                 })
                 
             })
