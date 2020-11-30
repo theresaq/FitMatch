@@ -95,7 +95,7 @@
         var uploadedFile = (e.target.files[0]);
         var uploadedFileURL = URL.createObjectURL(e.target.files[0]);
         var user = firebase.auth().currentUser;
-        var storageRef = storage.ref(user.displayName + '/ProfilePicture/' + uploadedFile.name);
+        var storageRef = firebase.storage().ref(user.displayName + '/ProfilePicture/' + uploadedFile.name);
         console.log(storageRef);
         var task = storageRef.put(uploadedFile);
 
@@ -164,5 +164,5 @@
   <script src="./scripts/firebase_api_fitmatch.js"> </script>
   <script src="./scripts/readUserName.js"> </script>
   <script src="./scripts/saveProfile.js"> </script>
-  <script src="./scripts/readUserProfileData.js"></script>
+  <script src="./scripts/readProfileData.js"></script>
 </body>
