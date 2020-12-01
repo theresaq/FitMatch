@@ -150,3 +150,16 @@ body {background: #f6f6f6; color: #444; font-family: 'Roboto', sans-serif; font-
     }
 .uploaded_file_view.show {opacity: 1;}
 .error_msg {text-align: center; color: #f00}
+
+#circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color:white;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
