@@ -336,7 +336,7 @@ div{
     font-size: 2em;
   }
 
-  .skip{
+  #skip{
     background-color: transparent;
     border-collapse: collapse;
     border-width: 0px;

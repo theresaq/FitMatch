@@ -1,10 +1,16 @@
-
 // Function to get user from the db and display in the homepage
 firebase.auth().onAuthStateChanged(function(user){
     if (user) {
-        function getUsersWithQuery(){
+        var counter = 1;
+
+        document.getElementById("skip").onclick = function () {
+            counter++;
+            console.log("Move to next user." + " Counter is at " + counter);
+       
+
+        function getUsersWithQuery(){  
             db.collection("users")
-            .where("activity1", "==", "Badminton")
+            .where("userNumber", "==", counter)
             .get()
             .then (function(snap){
                 snap.forEach(function(doc){
@@ -23,10 +29,13 @@ firebase.auth().onAuthStateChanged(function(user){
                 
             })
         }
+
         getUsersWithQuery();
+    };
     } else {
         // do nothing
     }
+
 });
 
 // Function to get User's age
