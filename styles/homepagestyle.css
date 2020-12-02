@@ -15,6 +15,10 @@ div{
     font-family: 'Merriweather Sans', sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
 .back{
   background-color: #0d3b66;
   height: auto;
