@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="\styles\homepagestyle.css">
+    <link rel="stylesheet" href="styles/fitnessRankStyle.css" />
 
     <!-- Font Awesome -->
 
@@ -53,7 +54,7 @@
                 <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
                     <div class="dropdown-content">
-                        <a href="matches.html">Matches</a>
+                        <a href="matches.html">FAVES</a>
                         <a href="messages.html">Messages</a>
                     </div>
                 </button>
@@ -62,7 +63,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Matches</a>
+                        <a class="nav-link" href="home.html">FAVES</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="messages.html">Messages</a>
@@ -77,43 +78,130 @@
     <div class="grid-background">
         <!-- Here goes the navbar in the aside-->
         <div>
+            <!-- ASIDE WITH THE FAVES  -->
             <aside>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="profile.html"><i class="far fa-user"></i></a>
+                <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="profile.html"><i class="far fa-user"></i></a> -->
 
                     <!--Dropdown button center to change to groups-->
-                    <div class="navbar-brand">
+                    <!-- <div class="navbar-brand">
                         <div class="dropdown-individual" style="color: #faf0ca;">
                             Individual
                             <div class="dropdown-content-individual" style="color: #0d3b66;">
                                 <a href="grouphome.html">Groups</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!--Dropdown button Top Right to go to matches or messages-->
-                    <div class="dropdown">
+                    <!-- <div class="dropdown"> -->
                         <!-- navbar-toggler CHANGES THE COLOR  -->
-                        <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
+                        <!-- <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
                             data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
                             <div class="dropdown-content">
-                                <a href="matches.html">Matches</a>
+                                <a href="matches.html">Faves</a>
                                 <a href="messages.html">Messages</a>
                             </div>
                         </button>
-                    </div>
+                    </div> -->
 
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="home.html">Matches</a>
+                                <a class="nav-link" href="home.html">Faves</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="messages.html">Messages</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                </h1>
+                            </li> -->
+
+                    <!-- </div> -->
+                <!-- </nav>
+                </h1> -->
+                <!-- TAB LIST FOR ASIDE OPTION -->
+                <!-- TAB LIST FOR THE ASIDE -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist" style="font-size: medium; background-color: #EE964B; height:auto;">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages"
+                aria-selected="false">Faves</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+                aria-selected="false">Settings</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">This is the home tab</div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">This is the profile tab</div>
+        <!-- CONTENT -->
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+
+            <!-- LIST OF FAVES-->
+            <div id="wrapper" style="width: 50%;">
+                <div id="list-container" style="float: left;">
+                    <ul>
+                        <li>
+                            <div><span>1</span><img src="images/profilepic.jpg" style = "height: 75px; width: 75px;"
+                                    alt="">
+                                <div><span>Kevin Black</span><span>Basketball</span></div>
+                            </div>
+                        
+                        <div>Message</div>
+                        </li>
+                        <li>
+                            <div><span>2</span><img src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person"
+                                    alt="">
+                                <div><span>Mary Jane</span><span>Tennis</span></div>
+                            </div>
+                            <div>Message</div>
+                        </li>
+                        <li>
+                            <div><span>3</span><img src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person"
+                                    alt="">
+                                <div><span>Karen Page</span><span>Soccer</span></div>
+                            </div>
+                            <div>Message</div>
+                        </li>
+                        <li>
+                            <div><span>4</span><img src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person"
+                                    alt="">
+                                <div><span>Mark Walnut</span><span>Badminton</span></div>
+                            </div>
+                                <div>Message</div>
+                        </li>
+                        <li>
+                            <div><span>5</span><img src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person"
+                                    alt="">
+                                <div><span>Jessica Pierce</span><span>Running</span></div>
+                            </div>
+                            <div>Message</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+    <script>
+        $(function () {
+            $('#myTab li:last-child a').tab('show')
+        })
+    </script>
+
+
+                
             </aside>
         </div>
 

@@ -1,8 +1,6 @@
 // Function to get user from the db and display in the homepage
 var counter = 1;
 
-
-
 function getUsersWithQuery(counter) {
     db.collection("users")
         .where("userNumber", "==", counter)
