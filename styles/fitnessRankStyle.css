@@ -20,6 +20,17 @@ body {
 	margin: -4em 0 0 -1em;
 }
 
+#faves {
+	color: #EE964B;
+}
+
+/* LIST IMAGE  */
+.list-img-top{
+	height: 75px;
+	 width: 75px;
+}
+
+
 #top-nav {
 	display: flex;
 	justify-content: space-between;
