@@ -122,7 +122,9 @@
                     style="font-size: medium; color: #0d3b66; background-color: #EE964B; height:auto; padding-top: 5%; justify-content: space-evenly; text-align: center;">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                            aria-controls="home" aria-selected="false" style="background-color: transparent; border-color: #EE964B;"><i class="fas fa-home"></i></a>
+                            aria-controls="home" aria-selected="false"
+                            style="background-color: transparent; border-color: #EE964B;"><i
+                                class="fas fa-home"></i></a>
                     </li>
                     <li class="nav-item" role="presentation" style="padding-right: 20px; padding-left: 20px;">
                         <a href="profile.html"><i class="far fa-user"></i></a>
@@ -150,35 +152,37 @@
                             </div>
                             <div id="list-container" style="float: left;">
                                 <ul>
+                                    <!-- First user liked -->
                                     <li>
                                         <div><span>1</span>
-                                                <!-- First user liked will go here -->
-                                            <div id = "firstPic"><span id="firstFavName">First Fav</span><span id = "firstActivity" >Basketball</span></div>
+                                            <div id="firstPic"><span id="firstFavName">second Fav</span><span
+                                                    id="firstActivity">Basketball</span></div>
                                         </div>
-
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
                                     </li>
+                                      <!-- SECOND USER LIKED WILL GO HERE -->
                                     <li>
-                                        <!-- SECOND USER LIKED WILL GO HERE -->
                                         <div><span>2</span>
-                                            <div id = "secondPic"><span id="secondFavName">second Fav</span><span id = "secondActivity" >Basketball</span></div>
+                                            <div id="secondPic"><span id="secondFavName">second Fav</span><span
+                                                    id="secondActivity">Basketball</span></div>
+                                        </div>
+                                        <div><button class="messageButton"><a href="main.html">Message</a></button>
+                                        </div>
+                                    </li>
+                                      <!-- THIRD USER LIKED WILL GO HERE -->
+                                    <li>
+                                        <div><span>3</span>
+                                            <div id="thirdPic"><span id="thirdFavName">third Fav</span><span
+                                                    id="thirdActivity">Basketball</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
                                     </li>
                                     <li>
-                                        <div><span>3</span><img
-                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="">
-                                            <div><span>Karen Page</span><span>Soccer</span></div>
-                                        </div>
-                                        <div><button class="messageButton"><a href="main.html">Message</a></button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div><span>4</span><img
-                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="">
-                                            <div><span>Mark Walnut</span><span>Badminton</span></div>
+                                        <div><span>4</span>
+                                            <div id="fourthPic"><span id="fourthFavName">fourth Fav</span><span
+                                                    id="fourthActivity">Basketball</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
@@ -197,8 +201,6 @@
 
                     </div>
                 </div>
-
-
         </div>
     </div>
 
@@ -207,8 +209,6 @@
             $('#myTab li:last-child a').tab('show')
         })
     </script>
-
-
 
     </aside>
     </div>
@@ -272,10 +272,9 @@
 
     <script src="./scripts/firebase_api_fitmatch.js"> </script>
     <!-- <script src="./scripts/readUserName.js"> </script> -->
-    <!--<script src="./scripts/readUserProfileData.js"> </script> -->
+    <script src="./scripts/readUserProfileData.js"> </script>
     <script src="scripts/favButton.js"> </script>
-    <script src="./scripts/test.js"></script>
-    <script src="./scripts/matches.js"></script>
+    <script src="scripts/favButtonTest.js"> </script>
 
 </body>
 
