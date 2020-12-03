@@ -4,7 +4,6 @@ var userMatches = [];
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
 
-        function getUsersWithQuery() {
             db.collection("users").doc(user.uid).onSnapshot(function (snap) {
                 var activity1 = snap.data().activity1;
 
@@ -55,8 +54,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
             });
 
-        }
-        getUsersWithQuery();
+        
     }
 })
 
@@ -66,7 +64,6 @@ var nextUser;
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         document.getElementById("skip").onclick = function () {
-
             // Make the index is correct for getting the next user in the array
             if (user.uid == userMatches[index - 1]) {
                 index++;

@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 
                 // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
                 
-                function getUsersWithQuery() {
+    
                     db.collection("users")
                         .where("name", "==", firstFav)
                         .get()
@@ -48,9 +48,8 @@ firebase.auth().onAuthStateChanged(function(user) {
                             })
                 
                         })
-                }
+
                 
-                getUsersWithQuery();
 
             })
         }
@@ -72,7 +71,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                 
                 // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
                 
-                function getUsersWithQuery() {
                     db.collection("users")
                         .where("name", "==", secondFav)
                         .get()
@@ -86,9 +84,9 @@ firebase.auth().onAuthStateChanged(function(user) {
                             })
                 
                         })
-                }
+
                 
-                getUsersWithQuery();
+
 
             })
         }
