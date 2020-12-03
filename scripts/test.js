@@ -19,8 +19,6 @@ firebase.auth().onAuthStateChanged(function (user) {
                             userMatches.push(doc.id);
                         });
 
-                        console.log(userMatches);
-
                         var index = 0;
                         var firstUser;
                         //Make sure the profile displayed isn't the user's own profile
@@ -108,8 +106,6 @@ firebase.auth().onAuthStateChanged(function (user) {
             })
 
         }
-        getUsersWithQuery();
-
     }
 })
 
