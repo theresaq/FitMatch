@@ -128,8 +128,8 @@ body {background: #f6f6f6; color: #444; font-family: 'Roboto', sans-serif; font-
 .file_uploaded {margin-top: 0; width: 50px; background:#83ccd3; height: 50px; }
 /*Displays photo*/
 .uploaded_file_view {  
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     text-align: center;
     display: block;
@@ -140,9 +140,10 @@ body {background: #f6f6f6; color: #444; font-family: 'Roboto', sans-serif; font-
 .file_remove{width: 30px; height: 30px; border-radius: 50%; display: block; position: absolute; background: #aaa; line-height: 30px; color: #fff; font-size: 12px;
      cursor: pointer; right: -15px; top: -15px;}
 .file_remove:hover {background: #222; transition: .2s;}
+/* UPLOADED VIEW */
 .uploaded_file_view img {
-    height: 170px;
-    width: 170px;
+    height: 270px;
+    width: 270px;
     border-radius: 50%;
     text-align: center;
     display: inline-flex;
