@@ -22,7 +22,6 @@ $(".heart.fa").click(function() {
     
 });
 
-
 // FIRST FAVORITED USER 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -73,7 +72,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                                 console.log("is from BC: ", doc.data().name);
                                 document.getElementById("secondActivity").innerText = doc.data().activity1;
                                 var picUrl = doc.data().photo;
-                                $("#firstPic").remove("<img src='" + picUrl + "' class='list-img-top'>")
+                               
                                 $("#secondPic").before("<img src='" + picUrl + "' class='list-img-top'>")
                                 
                             })
