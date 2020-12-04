@@ -46,11 +46,16 @@ document.getElementById("skip").onclick = function () {
             //$("#overlay").before("<img src='" + picUrl + "' class='card-img-top'>")
             $(".card-img-top").replaceWith($("<img src='" + picUrl + "' class='card-img-top'>"))
             //$("#profilepic").append("<img src='" + picUrl + "'>")
+            $("#skip").click(function() {
+                $(".heart.fa").toggleClass("fa-heart-o fa-heart");
+              });
+           
         })
 
     })
 }
 
+ 
 // Function to get User's age
 function getAge(dateString) {
     var today = new Date();
