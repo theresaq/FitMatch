@@ -423,3 +423,8 @@ a {
       bottom: 100%;
     }
   }
+
+  #list-container img{
+    width: 100px;
+    height: 100px;
+  }
