@@ -46,10 +46,11 @@ document.getElementById("skip").onclick = function () {
             //$("#overlay").before("<img src='" + picUrl + "' class='card-img-top'>")
             $(".card-img-top").replaceWith($("<img src='" + picUrl + "' class='card-img-top'>"))
             //$("#profilepic").append("<img src='" + picUrl + "'>")
-            $("#skip").click(function() {
+            
+            //toggle the heart icon to empty if it's filled
+            if ($("#heart").hasClass('fa-heart')) {
                 $(".heart.fa").toggleClass("fa-heart-o fa-heart");
-              });
-           
+              }
         })
 
     })
