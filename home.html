@@ -80,49 +80,15 @@
         <div>
             <!-- ASIDE WITH THE FAVES  -->
             <aside>
-                <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="profile.html"><i class="far fa-user"></i></a> -->
-
-                <!--Dropdown button center to change to groups-->
-                <!-- <div class="navbar-brand">
-                        <div class="dropdown-individual" style="color: #faf0ca;">
-                            Individual
-                            <div class="dropdown-content-individual" style="color: #0d3b66;">
-                                <a href="grouphome.html">Groups</a>
-                            </div>
-                        </div>
-                    </div> -->
-                <!--Dropdown button Top Right to go to matches or messages-->
-                <!-- <div class="dropdown"> -->
-                <!-- navbar-toggler CHANGES THE COLOR  -->
-                <!-- <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
-                            data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
-                            <div class="dropdown-content">
-                                <a href="matches.html">Faves</a>
-                                <a href="messages.html">Messages</a>
-                            </div>
-                        </button>
-                    </div> -->
-
-                <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.html">Faves</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="messages.html">Messages</a>
-                            </li> -->
-
-                <!-- </div> -->
-                <!-- </nav>
-                </h1> -->
                 <!-- TAB LIST FOR ASIDE OPTION -->
                 <!-- TAB LIST FOR THE ASIDE -->
                 <ul class="nav nav-tabs" id="myTab" role="tablist"
                     style="font-size: medium; color: #0d3b66; background-color: #EE964B; height:auto; padding-top: 5%; justify-content: space-evenly; text-align: center;">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                            aria-controls="home" aria-selected="false" style="background-color: transparent; border-color: #EE964B;"><i class="fas fa-home"></i></a>
+                            aria-controls="home" aria-selected="false"
+                            style="background-color: transparent;"><i
+                                class="fas fa-home"></i></a>
                     </li>
                     <li class="nav-item" role="presentation" style="padding-right: 20px; padding-left: 20px;">
                         <a href="profile.html"><i class="far fa-user"></i></a>
@@ -150,43 +116,50 @@
                             </div>
                             <div id="list-container" style="float: left;">
                                 <ul>
+                                    <!-- First user liked -->
                                     <li>
-                                        <div><span>1</span>
-                                                <!-- First user liked will go here -->
-                                            <div id = "firstPic"><span id="firstFavName">First Fav</span><span id = "firstActivity" >Basketball</span></div>
-                                        </div>
-
-                                        <div><button class="messageButton"><a href="main.html">Message</a></button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- SECOND USER LIKED WILL GO HERE -->
-                                        <div><span>2</span>
-                                            <div id = "secondPic"><span id="secondFavName">second Fav</span><span id = "secondActivity" >Basketball</span></div>
+                                        <div><span>1</span><img
+                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo1'>
+                                            <div><span id="firstFavName">second Fav</span><span
+                                                    id="firstActivity">Basketball</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
                                     </li>
+                                      <!-- SECOND USER LIKED WILL GO HERE -->
+                                    <li>
+                                        <div><span>2</span><img
+                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo2'>
+                                            <div id="secondPic"><span id="secondFavName">second Fav</span><span
+                                                    id="secondActivity">Basketball</span></div>
+                                        </div>
+                                        <div><button class="messageButton"><a href="main.html">Message</a></button>
+                                        </div>
+                                    </li>
+                                      <!-- THIRD USER LIKED WILL GO HERE -->
                                     <li>
                                         <div><span>3</span><img
-                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="">
-                                            <div><span>Karen Page</span><span>Soccer</span></div>
+                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo3'>
+                                            <div><span id="thirdFavName">third Fav</span><span
+                                                    id="thirdActivity">Basketball</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
                                     </li>
                                     <li>
                                         <div><span>4</span><img
-                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="">
-                                            <div><span>Mark Walnut</span><span>Badminton</span></div>
+                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo4'>
+                                            <div><span id="fourthFavName">fourth Fav</span><span
+                                                    id="fourthActivity">Basketball</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
                                     </li>
                                     <li>
                                         <div><span>5</span><img
-                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="">
-                                            <div><span>Jessica Pierce</span><span>Running</span></div>
+                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo5'>
+                                            <div><span id="fifthFavName"></span><span
+                                                    id="fifthActivity"></span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Message</a></button>
                                         </div>
@@ -197,8 +170,6 @@
 
                     </div>
                 </div>
-
-
         </div>
     </div>
 
@@ -207,8 +178,6 @@
             $('#myTab li:last-child a').tab('show')
         })
     </script>
-
-
 
     </aside>
     </div>
@@ -272,10 +241,12 @@
 
     <script src="./scripts/firebase_api_fitmatch.js"> </script>
     <!-- <script src="./scripts/readUserName.js"> </script> -->
-    <!--<script src="./scripts/readUserProfileData.js"> </script> -->
+    <!--<script src="./scripts/readUserProfileData.js"> </script>-->
     <script src="scripts/favButton.js"> </script>
-    <script src="./scripts/test.js"></script>
-    <script src="./scripts/matches.js"></script>
+    <script src="scripts/favButtonTest.js"> </script>
+    <script src="scripts/test.js"></script>
+    <script src="scripts/nextMatchingUser.js"></script>
+    <script src="scripts/matches.js"></script>
 
 </body>
 

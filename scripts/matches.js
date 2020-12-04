@@ -36,18 +36,11 @@ firebase.auth().onAuthStateChanged(function (user) {
                                         matches: firebase.firestore.FieldValue.arrayUnion(likedUserName)
                                     })
                                 })
-                                
-
                             }
                         })
                     }
-
-
                 })
-
             }
-
-
         })
     }
 })

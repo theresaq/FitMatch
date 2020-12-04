@@ -83,7 +83,8 @@ a {
 
   /* Mobile first card */
 .card{
-  width: 30rem; margin-right: 5px; margin-left: 5px; margin-top: auto; background-color: #faf0ca;
+  min-width: 374px; min-height: 638px;
+  max-width: 375px; max-height: 639px; margin-right: 5px; margin-left: 5px; margin-top: auto; background-color: #faf0ca;
 }
 
 .overlay{
@@ -98,8 +99,8 @@ a {
 
 /* IMAGE SIZE FOR THE UPLOADED PICTURE */
 .card-img-top{
-  width: 375px;
-  height: auto;
+  max-width: 375px;
+  max-height: 375px;
 }
 
 /* Make aside and when it enters mobile mode */
@@ -364,6 +365,7 @@ a {
   color: #EE964B;
 }
   .fa-user{
+    padding-top: 9px;;
    color: #0d3b66;
  }
 
@@ -422,4 +424,9 @@ a {
       top: auto;
       bottom: 100%;
     }
+  }
+
+  #list-container img{
+    width: 100px;
+    height: 100px;
   }

@@ -1,9 +1,9 @@
-$(".heart.fa").click(function() {
+$(".heart.fa").click(function () {
     $(this).toggleClass("fa-heart fa-heart-o");
 
     if ($("#heart").hasClass('fa-heart')) {
         console.log("ON");
-        
+
         // Save to database
         firebase.auth().onAuthStateChanged(function (user) {
             db.collection("users").doc(user.uid).update({
@@ -19,22 +19,19 @@ $(".heart.fa").click(function() {
             })
         })
     }
-    
+
 });
 
-
 // FIRST FAVORITED USER 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        function readUserName(){
+        function readUserName() {
             db.collection("users").doc(user.uid)
-            .onSnapshot(function(snap){
-                var firstFav = snap.data().hearts[0];
-                document.getElementById("firstFavName").innerText = snap.data().hearts[0];
-                
-                // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
-                
-                function getUsersWithQuery() {
+                .onSnapshot(function (snap) {
+                    var firstFav = snap.data().hearts[0];
+                    document.getElementById("firstFavName").innerText = snap.data().hearts[0];
+
+                    // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
                     db.collection("users")
                         .where("name", "==", firstFav)
                         .get()
@@ -43,36 +40,30 @@ firebase.auth().onAuthStateChanged(function(user) {
                                 console.log("is from BC: ", doc.data().name);
                                 document.getElementById("firstActivity").innerText = doc.data().activity1;
                                 var picUrl = doc.data().photo;
-                                $("#firstPic").before("<img src='" + picUrl + "' class='list-img-top'>")
-                                
+                                // $("#firstPic").before("<img src='" + picUrl + "' class='list-img-top'>")
+                                $("#photo1").replaceWith($("<img src='" + picUrl + "' id='photo1'>"))
+
                             })
-                
                         })
-                }
-                
-                getUsersWithQuery();
-
-            })
+                })
         }
-
         readUserName();
     } else {
-      // do nothing
+        // do nothing
     }
-  });
+});
 
-  // SECOND FAVORITED USER 
-firebase.auth().onAuthStateChanged(function(user) {
+// SECOND FAVORITED USER 
+firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        function readUserName(){
+        function readUserName1() {
             db.collection("users").doc(user.uid)
-            .onSnapshot(function(snap){
-                var secondFav = snap.data().hearts[1];
-                document.getElementById("secondFavName").innerText = snap.data().hearts[1];
-                
-                // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
-                
-                function getUsersWithQuery() {
+                .onSnapshot(function (snap) {
+                    var secondFav = snap.data().hearts[1];
+                    document.getElementById("secondFavName").innerText = snap.data().hearts[1];
+
+                    // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
+
                     db.collection("users")
                         .where("name", "==", secondFav)
                         .get()
@@ -81,20 +72,114 @@ firebase.auth().onAuthStateChanged(function(user) {
                                 console.log("is from BC: ", doc.data().name);
                                 document.getElementById("secondActivity").innerText = doc.data().activity1;
                                 var picUrl = doc.data().photo;
-                                $("#secondPic").before("<img src='" + picUrl + "' class='list-img-top'>")
-                                
+
+                                $("#photo2").replaceWith($("<img src='" + picUrl + "' id='photo2'>"))
+
                             })
-                
+
                         })
-                }
-                
-                getUsersWithQuery();
-
-            })
+                })
         }
-
-        readUserName();
+        readUserName1();
     } else {
-      // do nothing
+        // do nothing
     }
-  });
+});
+
+// THIRD FAVORITED USER 
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        function readUserName2() {
+            db.collection("users").doc(user.uid)
+                .onSnapshot(function (snap) {
+                    var thirdFav = snap.data().hearts[2];
+                    document.getElementById("thirdFavName").innerText = snap.data().hearts[2];
+
+                    // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
+
+                    db.collection("users")
+                        .where("name", "==", thirdFav)
+                        .get()
+                        .then(function (snap) {
+                            snap.forEach(function (doc) {
+                                console.log("is from BC: ", doc.data().name);
+                                document.getElementById("thirdActivity").innerText = doc.data().activity1;
+                                var picUrl = doc.data().photo;
+
+                                $("#photo3").replaceWith($("<img src='" + picUrl + "' id='photo3'>"))
+
+                            })
+
+                        })
+                })
+        }
+        readUserName2();
+    } else {
+        // do nothing
+    }
+});
+
+
+// fourth FAVORITED USER 
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        function readUserName3() {
+            db.collection("users").doc(user.uid)
+                .onSnapshot(function (snap) {
+                    var fourthFav = snap.data().hearts[3];
+                    document.getElementById("fourthFavName").innerText = snap.data().hearts[3];
+
+                    // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
+
+                    db.collection("users")
+                        .where("name", "==", fourthFav)
+                        .get()
+                        .then(function (snap) {
+                            snap.forEach(function (doc) {
+                                console.log("is from BC: ", doc.data().name);
+                                document.getElementById("fourthActivity").innerText = doc.data().activity1;
+                                var picUrl = doc.data().photo;
+                                $("#photo4").replaceWith($("<img src='" + picUrl + "' id='photo4'>"))
+
+                            })
+
+                        })
+                })
+        }
+        readUserName3();
+    } else {
+        // do nothing
+    }
+});
+
+// fifth FAVORITED USER 
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        function readUserName4() {
+            db.collection("users").doc(user.uid)
+                .onSnapshot(function (snap) {
+                    var fifthFav = snap.data().hearts[4];
+                    document.getElementById("fifthFavName").innerText = snap.data().hearts[4];
+
+                    // NOW LOOK FOR THE PHOTO AND THE MAIN ACTIVITY
+
+                    db.collection("users")
+                        .where("name", "==", fifthFav)
+                        .get()
+                        .then(function (snap) {
+                            snap.forEach(function (doc) {
+                                console.log("is from BC: ", doc.data().name);
+                                document.getElementById("fifthActivity").innerText = doc.data().activity1;
+                                var picUrl = doc.data().photo;
+                                $("#photo5").replaceWith($("<img src='" + picUrl + "' id='photo5'>"))
+
+                            })
+
+                        })
+                })
+        }
+        readUserName4();
+    } else {
+        // do nothing
+    }
+});
