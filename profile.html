@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>FitMatch Profile Page</title>
+  <title>Fit Match Profile Page</title>
+  <meta name="author" content="Group 25">
 
   <!-- Bootstrap for Mobile-first, and JQuery -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,6 +25,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
 
+  <!-- Font Awesome-->
   <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
 </head>
 
@@ -41,24 +43,14 @@
       <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
         <span class="navbar-toggler-icon"></span>
         <div class="dropdown-content">
-          <a href="home.html">Matches</a>
-          <a href="messages.html">Messages</a>
+          <a href="main.html">Matches</a>
+          <a href="main.html">Messages</a>
         </div>
       </button>
     </div>
-
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="home.html"><span id="matches">Matches</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="messages.html"><span id="messages">Messages</span></a>
-        </li>
-      </ul>
-    </div>
   </nav>
 
+  <!-- div for displaying profile photo if user uploads one-->
   <div id="profilephoto"></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -81,53 +73,6 @@
     </div>
   </main>
 
-  <!-- Uploads Profile Picture-->
-  <script>
-    var btnUpload = $("#upload_file"),
-      btnOuter = $(".button_outer");
-    btnUpload.on("change", function (e) {
-      var ext = btnUpload.val().split('.').pop().toLowerCase();
-      if ($.inArray(ext, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-        $(".error_msg").text("Not an Image...");
-      } else {
-        $(".error_msg").text("");
-        btnOuter.addClass("file_uploading");
-        setTimeout(function () {
-          btnOuter.addClass("file_uploaded");
-        }, 3000);
-
-        var uploadedFile = (e.target.files[0]);
-        var uploadedFileURL = URL.createObjectURL(e.target.files[0]);
-        var user = firebase.auth().currentUser;
-        var storageRef = firebase.storage().ref(user.displayName + '/ProfilePicture/' + uploadedFile.name);
-        console.log(storageRef);
-        storageRef.put(uploadedFile)
-          .then(function (geturl) {
-            storageRef.getDownloadURL()
-              .then(function (url) {
-                console.log(url);
-                db.collection("users").doc(user.uid).update({
-                  photo: url
-                })
-              })
-          })
-
-
-        setTimeout(function () {
-          $("#uploaded_view").prepend('<img src="' + uploadedFileURL + '" />').addClass("show");
-        }, 3500);
-      }
-    });
-    $(".file_remove").on("click", function (e) {
-      $("#uploaded_view").removeClass("show");
-      $("#uploaded_view").find("img").remove();
-      btnOuter.removeClass("file_uploading");
-      btnOuter.removeClass("file_uploaded");
-      //.uploaded_file_view img
-    });
-  </script>
-
-  <!---->
   <form>
     <h1>Personal Information</h1>
     <label for="Gender">Gender</label><br>
@@ -172,5 +117,6 @@
   <script src="./scripts/readUserName.js"> </script>
   <script src="./scripts/saveProfile.js"> </script>
   <script src="./scripts/displayUserProfilePic.js"></script>
+  <script src="./scripts/uploadProfilePic.js"></script>
   <!--<script src="./scripts/readProfileData.js"></script>-->
 </body>

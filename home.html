@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>FitMatch</title>
-    <meta name="comp1800 boilerplate code" content="COMP 1800 project">
+    <title>Fit Match</title>
     <meta name="author" content="Group 25">
 
     <link rel="shortcut icon" href="/images/droplet-icon-2.png" type="image/x-icon" />
@@ -12,13 +11,12 @@
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="\styles\homepagestyle.css">
-    <link rel="stylesheet" href="styles/fitnessRankStyle.css" />
+    <link rel="stylesheet" href="styles/homepagestyle.css">
+    <!--css for the faves section-->
+    <link rel="stylesheet" href="styles/faves.css">
 
     <!-- Font Awesome -->
-
-    <!-- Optional CSS of your own -->
-    <!-- <link type="text/css" rel="stylesheet" href="styles/my_app_pallete.css" /> -->
+    <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
 
     <!-- Copied from firebase documentation -->
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
@@ -27,14 +25,11 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
 
-    <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body class="back">
 
-    <!-- MOBILE FIRST DESIGN -->
+    <!-- Responsiveness for mobile-first design -->
     <div class="mobile">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="profile.html"><i class="far fa-user"></i></a>
@@ -44,31 +39,22 @@
                 <div class="dropdown-individual" style="color: #faf0ca;">
                     Individual
                     <div class="dropdown-content-individual" style="color: #0d3b66;">
-                        <a href="grouphome.html">Groups</a>
+                        <a href="pending.html">Groups</a>
                     </div>
                 </div>
             </div>
             <!-- Dropdown button Top Right to go to matches or messages-->
             <div class="dropdown">
-                <!-- navbar-toggler CHANGES THE COLOR  -->
+                <!-- navbar-toggler, changes the colour  -->
                 <button class="navbar-toggler btn-dark" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02"><span class="navbar-toggler-icon"></span>
                     <div class="dropdown-content">
-                        <a href="matches.html">FAVES</a>
-                        <a href="messages.html">Messages</a>
+                        <!-- should take user to a separate page that shows liked user profiles information, under construction-->
+                        <a href="pending.html">Faves</a>
+                        <!-- should enable the user to chat with matched users, under construction-->
+                        <a href="pending.html">Messages</a>
                     </div>
                 </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="home.html">FAVES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="messages.html">Messages</a>
-                    </li>
-                </ul>
             </div>
         </nav>
     </div>
@@ -78,16 +64,14 @@
     <div class="grid-background">
         <!-- Here goes the navbar in the aside-->
         <div>
-            <!-- ASIDE WITH THE FAVES  -->
+            <!--Aside that displays user's liked profiles' information-->
             <aside>
-                <!-- TAB LIST FOR ASIDE OPTION -->
-                <!-- TAB LIST FOR THE ASIDE -->
+                <!-- Tab list for the aside -->
                 <ul class="nav nav-tabs" id="myTab" role="tablist"
                     style="font-size: medium; color: #0d3b66; background-color: #EE964B; height:auto; padding-top: 5%; justify-content: space-evenly; text-align: center;">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                            aria-controls="home" aria-selected="false"
-                            style="background-color: transparent;"><i
+                            aria-controls="home" aria-selected="false" style="background-color: transparent;"><i
                                 class="fas fa-home"></i></a>
                     </li>
                     <li class="nav-item" role="presentation" style="padding-right: 20px; padding-left: 20px;">
@@ -105,7 +89,7 @@
 
                 <div class="tab-content">
                     <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"
-                        style="color: #EE964B; font-weight:100;">Fitmatch<br>Start Matching!</div>
+                        style="color: #EE964B; font-weight:100;">Fit Match<br>Start Matching!</div>
                     <!-- CONTENT -->
                     <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
 
@@ -116,50 +100,52 @@
                             </div>
                             <div id="list-container" style="float: left;">
                                 <ul>
-                                    <!-- First user liked -->
                                     <li>
                                         <div><span>1</span><img
-                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo1'>
-                                            <div><span id="firstFavName">second Fav</span><span
-                                                    id="firstActivity">Basketball</span></div>
+                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt=""
+                                                id='photo1'>
+                                            <div><span id="firstFavName">first like</span><span
+                                                    id="firstActivity">Pending</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Pending</a></button>
                                         </div>
                                     </li>
-                                      <!-- SECOND USER LIKED WILL GO HERE -->
                                     <li>
                                         <div><span>2</span><img
-                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo2'>
-                                            <div id="secondPic"><span id="secondFavName">second Fav</span><span
-                                                    id="secondActivity">Basketball</span></div>
+                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt=""
+                                                id='photo2'>
+                                            <div id="secondPic"><span id="secondFavName">second like</span><span
+                                                    id="secondActivity">Pending</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Pending</a></button>
                                         </div>
                                     </li>
-                                      <!-- THIRD USER LIKED WILL GO HERE -->
                                     <li>
                                         <div><span>3</span><img
-                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo3'>
-                                            <div><span id="thirdFavName">third Fav</span><span
-                                                    id="thirdActivity">Basketball</span></div>
+                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt=""
+                                                id='photo3'>
+                                            <div><span id="thirdFavName">third like</span><span
+                                                    id="thirdActivity">pending</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Pending</a></button>
                                         </div>
                                     </li>
                                     <li>
                                         <div><span>4</span><img
-                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo4'>
-                                            <div><span id="fourthFavName">fourth Fav</span><span
-                                                    id="fourthActivity">Basketball</span></div>
+                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt=""
+                                                id='photo4'>
+                                            <div><span id="fourthFavName">fourth like</span><span
+                                                    id="fourthActivity">Pending</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Pending</a></button>
                                         </div>
                                     </li>
                                     <li>
                                         <div><span>5</span><img
-                                            src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt="" id='photo5'>
-                                            <div><span id="fifthFavName"></span><span
-                                                    id="fifthActivity"></span></div>
+                                                src="https://dummyimage.com/75x75/aaaaaa/fff&amp;text=Person" alt=""
+                                                id='photo5'>
+                                            <div><span id="fifthFavName">fifth like</span><span
+                                                    id="fifthActivity">Pending</span></div>
                                         </div>
                                         <div><button class="messageButton"><a href="main.html">Pending</a></button>
                                         </div>
@@ -167,17 +153,10 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
         </div>
     </div>
-
-    <script>
-        $(function () {
-            $('#myTab li:last-child a').tab('show')
-        })
-    </script>
 
     </aside>
     </div>
@@ -185,8 +164,7 @@
     <!-- OTHER USER CARD -->
     <div class="info">
         <div class="card" id="card">
-            <!-- class = "card-img-overlay text-white" -->
-            <!-- HERE IS WHERE THE IMAGE WILL GO FROM THE USER -->
+            <!-- Here is where the other users' profile photos will be displayed- -->
             <div class="overlay" id="overlay">
                 <span id="UserName">User Name</span>
                 <span id="Age" style="font-size: large;">Age </span>
@@ -206,7 +184,7 @@
         </div>
     </div>
     </div>
-    <!-- Footer -->
+    <!-- Footer for smaller screen sizes -->
     <footer id="footer" class="navbar fixed-bottom justify-content-around bg-dark">
 
         <a href="home.html"><i class="fas fa-home"></i></a>
@@ -223,15 +201,15 @@
     <!-- Bootstrap libraries from CDN -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
+    </script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!-- Firebase libraries from CDN -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
@@ -240,13 +218,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 
     <script src="./scripts/firebase_api_fitmatch.js"> </script>
-    <!-- <script src="./scripts/readUserName.js"> </script> -->
-    <script src="./scripts/readUserProfileData.js"> </script>
+    <script src="scripts/displayOtherUsers.js"> </script>
     <script src="scripts/favButton.js"> </script>
-    <script src="scripts/favButtonTest.js"> </script>
-    <!-- <script src="scripts/test.js"></script> -->
-    <!-- <script src="scripts/nextMatchingUser.js"></script> -->
-    <!-- <script src="scripts/matches.js"></script> -->
+    <script src="scripts/matches.js"></script>
 
 </body>
 
