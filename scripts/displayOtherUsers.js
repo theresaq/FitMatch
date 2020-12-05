@@ -15,8 +15,19 @@ function getUsersWithQuery(counter) {
                 document.getElementById("skill1").innerText = doc.data().skill1;
                 var picUrl = doc.data().photo;
                 $("#overlay").before("<img src='" + picUrl + "' class='card-img-top'>")
+
+                // Add the user profile displayed to viewed array
+                // The viewed array is currently not being used, but we would like to make it eventually so that profiles that have already been viewed will not show up again
+                firebase.auth().onAuthStateChanged(function (user) {
+                    if (user) {
+                        db.collection("users").doc(user.uid).update({
+                            viewed: firebase.firestore.FieldValue.arrayUnion(doc.data().name)
+                        })
+                    }
+                })
             })
         })
+
 }
 
 getUsersWithQuery(counter);
@@ -37,12 +48,24 @@ document.getElementById("skip").onclick = function () {
                 document.getElementById("skill1").innerText = doc.data().skill1;
                 var picUrl = doc.data().photo;
                 $(".card-img-top").replaceWith($("<img src='" + picUrl + "' class='card-img-top'>"))
+
+                // Add the user profile displayed to viewed array
+                // The viewed array is currently not being used, but we would like to eventually make it so that profiles that have already been viewed will not show up again
+                firebase.auth().onAuthStateChanged(function (user) {
+                    if (user) {
+                        db.collection("users").doc(user.uid).update({
+                            viewed: firebase.firestore.FieldValue.arrayUnion(doc.data().name)
+                        })
+                    }
+                })
+
                 //toggle the heart icon to empty if it's filled
                 if ($("#heart").hasClass('fa-heart')) {
                     $(".heart.fa").toggleClass("fa-heart-o fa-heart");
                 }
             })
         })
+
 }
 
 
