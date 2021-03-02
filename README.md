@@ -1,24 +1,17 @@
-Saki Tasaka
-index.html
-main.html
-## My Web Application (Title)
+## Fit Match
 
 * [General info](#general-info)
-## Theresa profile.html
 * [Technologies](#technologies)
 * [Contents](#content)
 
-## Kevin Baumann index.html 
-
 ## General Info
-This browser based web application to ...
+A web application that matches users based on their fitness interests.
 	
 ## Technologies
 Technologies used for this project:
-* HTML, CSS
+* HTML
+* CSS
 * JavaScript
-* Bootstrap 
-* ...
 	
 ## Content
 Content of the project folder:
@@ -26,26 +19,22 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to editing for practice.
-├── profile.html             # Profile/settings page
+├── home.html                # home page that allows users to see other users with same interests
+├── index.html               # same as landing.html, duplicated for firebase hosting purposes
+├── landing.html             # landing page
+├── login.html               # user login page
+├── main.html                # under construction
+├── profile.html             # user profile/settings page
 └── README.md
 
 It has the following subfolders and files:
-├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
-├── scripts                  # Folder for scripts
-    /blah.js                 # 
-├── styles                   # Folder for styles
-    /blah.css                # 
+├── .firebase                # Folder for firebase hosting
+├── images                   # Folder for images              
+├── scripts                  # Folder for scripts                 
+├── styles                   # Folder for styles              
 
 Firebase hosting files: 
-├── .firebaserc...
-
+├── .firebaserc
 
 ```
-
-Tips for file naming files and folders:
-* use lowercase with no spaces
-* use dashes (not underscore) for word separation
 
